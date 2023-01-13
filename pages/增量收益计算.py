@@ -5,9 +5,6 @@ import numpy as np
 import math
 import os
 from datetime import datetime as dt
-import scipy.stats as stats
-from pylab import mpl
-from bokeh.plotting import figure
 import plotly.express as px
 
 ## 一些函数
