@@ -5,7 +5,7 @@ import numpy as np
 import math
 import os
 from datetime import datetime as dt
-import plotly as px
+import plotly.express as px
 
 ## 一些函数
 # 颜色设置
