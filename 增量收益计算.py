@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -6,6 +5,7 @@ import math
 import os
 from datetime import datetime as dt
 import plotly.express as px
+import openpyxl
 
 ## 一些函数
 # 颜色设置
@@ -44,7 +44,7 @@ st.markdown("---")
 
 if recent_data:
     
-    df = pd.read_excel(recent_data)
+    df = pd.read_excel(recent_data,engine='openpyxl')
     
     all_user = df.loc[(df['生命周期']=='ALL') & (df["职业"]=='ALL'), ~df.columns.isin(['达尔文-49 加群率','达尔文-1 加群率','BELL-12 加群率'])].set_index('data_date')
     t0_user_all = df.loc[(df['生命周期']=='T=0') & (df['职业']=='ALL'),~df.columns.isin(['达尔文-49 加群率','达尔文-1 加群率','BELL-12 加群率','DARWIN-49 售前页曝光率','DARWIN-1 售前页曝光率','BELL-12 售前页曝光率'])].set_index('data_date')
